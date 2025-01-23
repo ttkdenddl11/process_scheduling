@@ -1,0 +1,15 @@
+# Visual Studio 관련 파일
+.vs/
+Debug/
+Release/
+
+# 빌드 산출물
+*.exe
+*.dll
+*.pdb
+bin/
+obj/
+
+# OS 파일
+*.log
+*.tmp
