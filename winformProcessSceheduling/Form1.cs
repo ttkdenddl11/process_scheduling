@@ -60,7 +60,7 @@ namespace winformProcessSceheduling
             //프로세스 데이터들 xml에 저장
             string filePath = "processes.xml";
             XMLControl xml = new XMLControl();
-            xml.SaveProcessXml(dgInputData, filePath, algoFind(), tboxTimequntum.Text);
+            xml.SaveProcessXml(dgInputData, dt, filePath, algoFind(), tboxTimequntum.Text);
             
         }
 
