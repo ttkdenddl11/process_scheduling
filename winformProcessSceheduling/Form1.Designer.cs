@@ -43,8 +43,15 @@ namespace winformProcessSceheduling
             this.tboxTimequntum = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rdoPcore = new System.Windows.Forms.RadioButton();
+            this.rdoEcore = new System.Windows.Forms.RadioButton();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnCoreAdd = new System.Windows.Forms.Button();
+            this.dgOutputData = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgInputData)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgOutputData)).BeginInit();
             this.SuspendLayout();
             // 
             // dgInputData
@@ -170,16 +177,72 @@ namespace winformProcessSceheduling
             this.groupBox1.Controls.Add(this.rdoFCFS);
             this.groupBox1.Location = new System.Drawing.Point(521, 266);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(159, 77);
+            this.groupBox1.Size = new System.Drawing.Size(120, 77);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "알고리즘 선택";
+            // 
+            // rdoPcore
+            // 
+            this.rdoPcore.AutoSize = true;
+            this.rdoPcore.Location = new System.Drawing.Point(14, 55);
+            this.rdoPcore.Name = "rdoPcore";
+            this.rdoPcore.Size = new System.Drawing.Size(71, 16);
+            this.rdoPcore.TabIndex = 10;
+            this.rdoPcore.TabStop = true;
+            this.rdoPcore.Text = "P-CORE";
+            this.rdoPcore.UseVisualStyleBackColor = true;
+            // 
+            // rdoEcore
+            // 
+            this.rdoEcore.AutoSize = true;
+            this.rdoEcore.Checked = true;
+            this.rdoEcore.Location = new System.Drawing.Point(14, 20);
+            this.rdoEcore.Name = "rdoEcore";
+            this.rdoEcore.Size = new System.Drawing.Size(71, 16);
+            this.rdoEcore.TabIndex = 9;
+            this.rdoEcore.TabStop = true;
+            this.rdoEcore.Text = "E-CORE";
+            this.rdoEcore.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.rdoPcore);
+            this.groupBox2.Controls.Add(this.rdoEcore);
+            this.groupBox2.Location = new System.Drawing.Point(341, 465);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(159, 77);
+            this.groupBox2.TabIndex = 14;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "코어 추가";
+            // 
+            // btnCoreAdd
+            // 
+            this.btnCoreAdd.Location = new System.Drawing.Point(506, 499);
+            this.btnCoreAdd.Name = "btnCoreAdd";
+            this.btnCoreAdd.Size = new System.Drawing.Size(97, 43);
+            this.btnCoreAdd.TabIndex = 15;
+            this.btnCoreAdd.Text = "코어 추가";
+            this.btnCoreAdd.UseVisualStyleBackColor = true;
+            this.btnCoreAdd.Click += new System.EventHandler(this.btnCoreAdd_Click);
+            // 
+            // dgOutputData
+            // 
+            this.dgOutputData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgOutputData.Location = new System.Drawing.Point(647, 12);
+            this.dgOutputData.Name = "dgOutputData";
+            this.dgOutputData.RowTemplate.Height = 23;
+            this.dgOutputData.Size = new System.Drawing.Size(483, 447);
+            this.dgOutputData.TabIndex = 16;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1142, 551);
+            this.Controls.Add(this.dgOutputData);
+            this.Controls.Add(this.btnCoreAdd);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.tboxTimequntum);
             this.Controls.Add(this.btnRun);
@@ -194,9 +257,13 @@ namespace winformProcessSceheduling
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dgInputData)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgOutputData)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -218,6 +285,11 @@ namespace winformProcessSceheduling
         private System.Windows.Forms.TextBox tboxTimequntum;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton rdoPcore;
+        private System.Windows.Forms.RadioButton rdoEcore;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button btnCoreAdd;
+        private System.Windows.Forms.DataGridView dgOutputData;
     }
 }
 

@@ -22,7 +22,7 @@ void processFCFS(vector<Core>& core_list, vector<Process>& process_list) {
 	}
 }
 
-void processRR(vector<Core>& core_list, vector<Process>& process_list, int time_quntum, queue<Process>& ready_que) {
+void processRR(vector<Core>& core_list, vector<Process>& process_list, int time_quntum, queue<Process>& temp_que) {
 	// 코어 한바퀴 돌며 시간 계산
 	for (int i = 0; i < core_list.size(); i++) {
 		if (core_list[i].alloc) {
@@ -48,7 +48,7 @@ void processRR(vector<Core>& core_list, vector<Process>& process_list, int time_
 				core_list[i].time_quntum = time_quntum;
 				core_list[i].alloc = false;
 				Process temp_process = *core_list[i].getProcess(process_list);
-				ready_que.push(temp_process);
+				temp_que.push(temp_process);
 			}
 		}
 	}

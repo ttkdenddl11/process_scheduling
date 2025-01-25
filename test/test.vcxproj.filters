@@ -27,6 +27,9 @@
     <ClCompile Include="algorithm.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\pugixml-master\pugixml-master\src\pugixml.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="core.h">
