@@ -1,5 +1,5 @@
 # 💬Process Scheduling
-### 2023-1학기 KOREATECH 운영체제 실습
+### KOREATECH 운영체제 실습 복습
 **FCFS AND RoundRobin Algorithm**
 
 - **GUI : C# Winform**
