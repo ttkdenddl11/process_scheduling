@@ -12,4 +12,10 @@ public:
 	Core(int c, int t, bool a, string n);
 
 	Process* getProcess(vector<Process>& process_list);
+
+	void coreAlloc(queue<Process>& ready_que);
+
+	void progressProcess(vector<Process>& process_list);
+
+	void coreReturn(vector<Process>& process_list);
 };
